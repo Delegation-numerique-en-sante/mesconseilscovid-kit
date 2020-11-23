@@ -339,7 +339,9 @@
             const button = event.target
             const article = button.parentElement.querySelector('article')
             /* Source : https://stackoverflow.com/a/42921059 */
-            const content = article.textContent.replace(/[\t\f\v ]+/g, " ").replace(/\n /g, "\n").trim()
+            const content = article.textContent.split("\n").map(function(line) {
+                return line.trim()
+            }).join("\n").trim()
             copyToClipboard(content)
             button.textContent = "Texte copié ! ✓"
             event.preventDefault()
