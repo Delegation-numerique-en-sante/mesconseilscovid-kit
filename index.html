@@ -7,12 +7,15 @@
     <link rel="stylesheet" type="text/css" href="static/style.css">
     <link rel="icon" href="favicon.ico">
     <meta name="referrer" content="none">
-    <style type="text/css">
+    <style>
         #page h3 {
             font-size: 1.6rem;
         }
         #page h4 {
             font-size: 1.45rem;
+        }
+        #page p {
+            text-align: left;
         }
         #page figure {
             text-align: center;
@@ -57,6 +60,30 @@
         <section id="page">
             <div class="block introduction-block">
                 <h2>Téléchargez nos supports de communication</h2>
+
+                <div id="presentation-mcc">
+                    <h3>
+                        Présentation Mes Conseils Covid
+                        <a href="#presentation-mcc">#</a>
+                    </h3>
+                    
+                    <article>
+                        
+                        <p>Mes Conseils Covid est un outil du Ministère des Solidarités et de la Santé, déployé dans le cadre de la stratégie « Tester, Alerter, Protéger » (TAP) de lutte contre l’épidémie de Covid-19.</p>
+                        
+                        <p>Cet outil s’adresse à tout un chacun. Il offre des informations fiables, claires et à jour pour savoir comment agir au quotidien dans le contexte fluctuant de l’épidémie.</p>
+                        
+                        <p>Sur Mes Conseils Covid, vous pouvez obtenir des conseils personnalisés pour vous-même ou pour vos proches, en répondant à quelques questions sur votre santé, vos symptômes, votre foyer, votre lieu de résidence ou votre profession. L’outil s’adapte aux situations de chacun, pour mieux vous informer.</p>
+                        
+                        <p>Si vous êtes malade ou « personne contact », vous pouvez y suivre l’évolution quotidienne de vos symptômes afin d’obtenir des conseils adaptés à votre nouvelle situation. L’outil vous permettra de déterminer les différentes phases de la maladie : incubation, infection et guérison, pour gérer la durée de votre isolement et vous aider à protéger vos proches.</p>
+                        
+                        <p>Les informations saisies sur Mes Conseils Covid ne sont pas collectées. Sauvegardées sur votre appareil (tablette, téléphone, ordinateur) vous pouvez les effacer à tout moment et en un clic.</p>
+                        
+                    </article>
+                    
+                    <a class="button js-copy" href="#">Copier ce texte</a>
+                    
+                </div>
 
                 <div id="affiches-mcc">
                     <h3>
@@ -281,5 +308,43 @@
             </div>
         </footer>
     </main>
+    <script>
+        function copyToClipboard(text) {
+            /* Source: https://stackoverflow.com/a/33928558 */
+            if (window.clipboardData && window.clipboardData.setData) {
+                // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+                return clipboardData.setData("Text", text)
+        
+            }
+            else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+                const textarea = document.createElement("textarea")
+                textarea.textContent = text
+                textarea.style.position = "fixed"  // Prevent scrolling to bottom of page in Microsoft Edge.
+                document.body.appendChild(textarea)
+                textarea.select()
+                try {
+                    return document.execCommand("copy")  // Security exception may be thrown by some browsers.
+                }
+                catch (ex) {
+                    console.warn("Copy to clipboard failed.", ex)
+                    return false
+                }
+                finally {
+                    document.body.removeChild(textarea)
+                }
+            }
+        }
+        const copyButton = document.querySelector('.js-copy')
+        copyButton.addEventListener('click', function(event) {
+            const button = event.target
+            const article = button.parentElement.querySelector('article')
+            /* Source : https://stackoverflow.com/a/42921059 */
+            const content = article.textContent.replace(/[\t\f\v ]+/g, " ").replace(/\n /g, "\n").trim()
+            copyToClipboard(content)
+            button.textContent = "Texte copié ! ✓"
+            event.preventDefault()
+        })
+        
+    </script>
 </body>
 </html>
