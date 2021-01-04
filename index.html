@@ -31,12 +31,19 @@
         #page a[href$='.pdf']::after {
             content: '';
         }
+        #page a[href*='youtube.com']::after {
+            content: '';
+        }
         #page div div {
-            padding: 1rem;
-            margin-bottom: 4rem;
+            padding: 1rem 1rem 2rem 1rem;
+            margin-bottom: 3rem;
+        }
+        #page article {
+            margin-bottom: 2rem;
         }
         #page :target {
             background: LightGoldenRodYellow;
+            border-radius: 1rem;
         }
         #page a.button {
             white-space: nowrap;
@@ -61,13 +68,12 @@
             <div class="block introduction-block">
                 <h2>Téléchargez nos supports de communication</h2>
 
-                <div id="presentation-mcc">
-                    <h3>
-                        Présentation Mes Conseils Covid
-                        <a href="#presentation-mcc">#</a>
-                    </h3>
-                    
+                <div id="presentation-mcc">                    
                     <article>
+                        <h3>
+                            Présentation Mes Conseils Covid
+                            <a href="#presentation-mcc">#</a>
+                        </h3>
                         
                         <p>Mes Conseils Covid est un outil du Ministère des Solidarités et de la Santé, déployé dans le cadre de la stratégie « Tester, Alerter, Protéger » (TAP) de lutte contre l’épidémie de Covid-19.</p>
                         
@@ -83,6 +89,21 @@
                     
                     <a class="button js-copy" href="#">Copier ce texte</a>
                     
+                </div>
+
+                <div id="videos-mcc">
+                    <article>
+                        <h3>
+                            Vidéos Mes Conseils Covid
+                            <a href="#videos-mcc">#</a>
+                        </h3>
+                        
+                        <p>Plusieurs vidéos sont disponibles sur la chaîne Youtube du ministère des Solidarités et de la Santé. Des films longs regroupent l’ensemble des vidéos mises bout à bout. Selon votre contexte, vous pouvez aussi utiliser une saynète particulière.</p>
+                        
+                    </article>
+                    
+                    <a class="button" href="https://www.youtube.com/playlist?list=PLfP9K0P3LEed4yvICQkYaqF0hjI7n9i5r">Accès à la chaîne Youtube</a>
+
                 </div>
 
                 <div id="affiches-mcc">
