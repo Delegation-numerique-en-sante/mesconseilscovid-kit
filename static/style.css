@@ -43,7 +43,7 @@ a:active {
 
 section,
 main footer {
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
 }
 main footer {
@@ -126,7 +126,7 @@ a .profil {
     margin: 1rem 0;
 }
 .block > * {
-    max-width: 48rem;
+    max-width: 68rem;
     margin: auto;
 }
 .block > h1 {
@@ -164,7 +164,6 @@ a .profil {
 .introduction-block p {
     margin-left: auto;
     margin-right: auto;
-    max-width: 60ch;
 }
 #suivi-introduction-block h4 {
     margin-top: 2rem;
