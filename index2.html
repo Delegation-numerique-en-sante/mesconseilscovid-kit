@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,58 +12,92 @@
         #page h3 {
             font-size: 1.6rem;
         }
+
         #page h4 {
             font-size: 1.45rem;
         }
+
         #page p,
         #page ul {
             text-align: left;
         }
+
         #page ul {
             margin-left: 3rem;
         }
+
         #page .centered,
         #page figure {
             text-align: center;
         }
+
         #page img {
             display: inline-block;
             width: 100%;
             max-width: 15rem;
         }
+
         #page figcaption {
             line-height: 3.5;
         }
+
         #page a[href$='.pdf']::after {
             content: '';
         }
+
         #page a[href*='youtube.com']::after {
             content: '';
         }
+
         #page div div {
             padding: 1rem 1rem 2rem 1rem;
             margin-bottom: 3rem;
         }
+
         #page article {
             margin-bottom: 2rem;
         }
+
         #page :target {
             background: LightGoldenRodYellow;
             border-radius: 1rem;
         }
+
         #page a.button {
             white-space: nowrap;
         }
     </style>
-    <script async defer data-domain="kit.mesconseilscovid.fr" src="https://stats.mesconseilscovid.fr/js/plausible.js"></script>
+    <script>
+        console.log('gello');
+
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        const presentation = urlParams.get('presentation')
+        console.log(presentation);
+        var cible = 'tous';
+        if (presentation == 'medecin') {
+            cible = 'patients';
+        }
+
+        if (presentation == 'collectivite') {
+            cible = 'administrés';
+        }
+    </script>
+    <script async defer data-domain="kit.mesconseilscovid.fr"
+        src="https://stats.mesconseilscovid.fr/js/plausible.js"></script>
 </head>
+
 <body>
     <header>
         <section>
-            <img id="marianne" src="static/marianne.png" alt="Logo du Ministère des Solidarités et de la Santé" width="100" height="78">
+            <img id="marianne" src="static/marianne.png" alt="Logo du Ministère des Solidarités et de la Santé"
+                width="100" height="78">
             <h1>
                 <a id="logo" href="https://mesconseilscovid.sante.gouv.fr/" title="Aller à l’accueil">
-                    <img id="logo-carre" src="static/logo-carre.png" alt="Logo Mes Conseils Covid (partie carrée)" width="75" height="75"><img id="logo-titre" src="static/logo-titre.png" alt="Logo Mes Conseils Covid (partie titre)" width="75" height="34">
+                    <img id="logo-carre" src="static/logo-carre.png" alt="Logo Mes Conseils Covid (partie carrée)"
+                        width="75" height="75"><img id="logo-titre" src="static/logo-titre.png"
+                        alt="Logo Mes Conseils Covid (partie titre)" width="75" height="34">
                     <span class="visually-hidden">Mes Conseils Covid</span>
                 </a>
             </h1>
@@ -74,132 +109,150 @@
             <div class="block introduction-block">
                 <h2> Des réponses fiables, claires et à jour pour savoir comment agir dans une situation
                     liée à la Covid-19.</h2>
-                
-                    <div id="presentation">                    
-                        <article>
-                            <p><a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank"> MesConseilsCovid.sante.gouv.fr</a> est un site du ministère des Solidarités et de la Santé relayant les consignes sanitaires du gouvernement. Par ailleurs, il est conçu pour guider les visiteurs en fonction des situations auxquelles ils se trouvent confrontés (test, cas
-                                contact, isolement, vaccins...).</p>
-                            
-                        </article>
-                        <br/>                                <a class="button button-outline button-feedback-contact" href="mailto:mesconseilscovid@sante.gouv.fr">Nous contacter</a>
 
-                        <a class="button" href="./index.html">Accédez à notre KIT de diffusion</a>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <article>
-                            <h3>
-                                Des réponses fiables
-                               
-                            </h3>
-                            
-                            <p>Face à la multitude de sources d’information, nous avons tous du mal à trouver
-                                une information fiable.
-                                Sur <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a>, une équipe de médecins du ministère des Solidarités et de la Santé veille à l’exactitude des informations fournies.
-                                
-                                </p>
-                            
-                        </article>
+                <div id="presentation">
+                    <article>
+                        <p><a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">
+                                MesConseilsCovid.sante.gouv.fr</a> est un site du ministère des Solidarités et de la
+                            Santé relayant les consignes sanitaires du gouvernement. Par ailleurs, il est conçu pour
+                            guider les utilisateurs en fonction des situations auxquelles ils se trouvent confrontés (test,
+                            cas
+                            contact, isolement, vaccins...).</p>
 
-                        <article>
-                            <h3>
-                                Un site internet clair
-                               
-                            </h3>
-                            
-                            <p>Les recommandations sanitaires sont parfois complexes et il n’est pas toujours facile  de savoir quoi faire. L’objectif de <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a> est de proposer un site
-                                simple et accessible pour tous.<br/> Notre équipe d’experts du numérique adopte une méthode centrée sur l’utilisateur, inscrite dans une démarche d’amélioration continue qui s’appuie
-                                sur le retour des utilisateurs.
-                                </p>
-                            
-                        </article>
+                    </article>
+                    <br /> <a class="button button-outline button-feedback-contact"
+                        href="mailto:mesconseilscovid@sante.gouv.fr">Nous contacter</a>
 
-                        <article>
-                            <h3>
-                                Une information à jour
-                            </h3>
-                            
-                            <p>Grâce à une équipe technique vigilante et réactive, <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a> reflète à chaque
-                                instant les mesures sanitaires en vigueur, malgré leur évolution.
-                                </p>
-                            
-                                <p>
-                                    Le respect de l’anonymat des utilisateurs est un principe primordial de
-                                    <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a>. Les informations personnelles saisies sur le site ne sont pas
-                                    collectées. Elles sont sauvegardées uniquement sur l'appareil de l'utilisateur, qui
-                                    peut les effacer en un clic.
-                                </p>
-                        </article>
-                        <br/>
-                        <a class="button" href="./index.html">Accédez à notre KIT de diffusion</a>
-                        <br/>
-                        <br/>
-                        <br/>
+                    <a class="button" href="./index.html">Accédez à notre KIT de diffusion</a>
+                    <br />
+                    <br />
+                    <br />
+                    <article>
+                        <h3>
+                            Des réponses fiables
 
-                        <article>
-                            <h3>
-                                Exemple d’usage
-                            </h3>
-                            
-                            <p>Par exemple, <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a> déterminera la durée de l’isolement, la date du futur test, ou le nombre de doses de vaccins nécessaire, en fonction des réponses de chacun. L’utilisateur peut aussi y réaliser le suivi de ses symptômes et de sa situation pour obtenir
-                                de nouveaux conseils.
-                                </p>
-                            
-                                <p>
-                                    <figure>
-                                    <img style="max-width:75rem" src="media/timeline.png"> 
-                                </figure>
-                                </p>
-                        </article>
+                        </h3>
+
+                        <p>Face à la multitude de sources d’information, nous avons tous du mal à trouver
+                            une information fiable.
+                            Sur <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a>,
+                            une équipe de médecins du ministère des Solidarités et de la Santé veille à l’exactitude des
+                            informations fournies.
+
+                        </p>
+
+                    </article>
+
+                    <article>
+                        <h3>
+                            Un site internet clair
+
+                        </h3>
+
+                        <p>Les recommandations sanitaires sont parfois complexes et il n’est pas toujours facile de
+                            savoir quoi faire. L’objectif de <a href="http://mesconseilscovid.sante.gouv.fr/"
+                                target="_blank">MesConseilsCovid</a> est de proposer un site
+                            simple et accessible pour tous.<br /> Notre équipe d’experts du numérique adopte une méthode
+                            centrée sur l’utilisateur, inscrite dans une démarche d’amélioration continue qui s’appuie
+                            sur le retour des utilisateurs.
+                        </p>
+
+                    </article>
+
+                    <article>
+                        <h3>
+                            Une information à jour
+                        </h3>
+
+                        <p>Grâce à une équipe technique vigilante et réactive, <a
+                                href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a>
+                            reflète à chaque
+                            instant les mesures sanitaires en vigueur, malgré leur évolution.
+                        </p>
+
+                        <p>
+                            Le respect de l’anonymat des utilisateurs est un principe primordial de
+                            <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a>. Les
+                            informations personnelles saisies sur le site ne sont pas
+                            collectées. Elles sont sauvegardées uniquement sur l'appareil de l'utilisateur, qui
+                            peut les effacer en un clic.
+                        </p>
+                    </article>
+                    <br />
+                    <a class="button" href="./index.html">Accédez à notre KIT de diffusion</a>
+                    <br />
+                    <br />
+                    <br />
+
+                    <article>
+                        <h3>
+                            Exemple d’usage
+                        </h3>
+
+                        <p>Par exemple, <a href="http://mesconseilscovid.sante.gouv.fr/"
+                                target="_blank">MesConseilsCovid</a> déterminera la durée de l’isolement, la date du
+                            futur test, ou le nombre de doses de vaccins nécessaire, en fonction des réponses de chacun.
+                            L’utilisateur peut aussi y réaliser le suivi de ses symptômes et de sa situation pour
+                            obtenir
+                            de nouveaux conseils.
+                        </p>
+
+                        <p>
+                        <figure>
+                            <img style="max-width:75rem" src="media/timeline.png">
+                        </figure>
+                        </p>
+                    </article>
 
 
-                        <article>
-                            <h3>
-                                Mes conseils covid en chiffres
-                            </h3>
-                            
-                            <p>
-                                <ul>
-                                    <li>2 millions de visites en un an (date de mise en ligne : le 5 mai 2020)</li>
-                                    <li>382 mille personnes rassurées sur la marche à suivre</li>
-                                    <li>113 mises à jours du site en un an</li>
-                                         
-                                        
-                                </ul>
-                                </p>
-                        </article>
+                    <article>
+                        <h3>
+                            Mes conseils covid en chiffres
+                        </h3>
 
-                        <article>
-                            <h3>
-                                Ils recommandent MesConseilsCovid
-                            </h3>
-                            
-                            <p>
-                                <figure>
-                                <img style="max-width:75rem" src="media/reco.png"> 
-                            </figure>
-                            </p>
-                        </article>
+                        <p>
+                        <ul>
+                            <li>2 millions de visites en un an (date de mise en ligne : le 5 mai 2020)</li>
+                            <li>382 mille personnes rassurées sur la marche à suivre</li>
+                            <li>113 mises à jours du site en un an</li>
 
-                        <article>
-                            <h3>
-                                Aidez-nous en apposant diffusant nos affiches et en parlant de
-                                <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a> sur vos réseaux sociaux et site internet
-                                                           
-                            </h3>
-                            
-                          
-                            
-                        </article>
-                        
-                        <a class="button" href="./index.html">Accédez à notre KIT de diffusion</a>
-                    </div>
 
-              
+                        </ul>
+                        </p>
+                    </article>
 
-         
+                    <article>
+                        <h3>
+                            Ils recommandent MesConseilsCovid
+                        </h3>
 
-                
+                        <p>
+                        <figure>
+                            <img style="max-width:75rem" src="media/reco.png">
+                        </figure>
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>
+                            Aidez-nous en diffusant nos affiches et en parlant de
+                            <a href="http://mesconseilscovid.sante.gouv.fr/" target="_blank">MesConseilsCovid</a> sur
+                            vos réseaux sociaux et site internet
+
+                        </h3>
+
+
+
+                    </article>
+
+                    <a class="button" href="./index.html">Accédez à notre KIT de diffusion</a>
+                </div>
+
+
+
+
+
+
             </div>
         </section>
         <footer>
@@ -208,7 +261,8 @@
                     <div class="feedback-question">
                         <p>
                             <span class="feedback-controls">
-                                <a class="button button-outline button-feedback-contact" href="mailto:mesconseilscovid@sante.gouv.fr">Nous contacter</a>
+                                <a class="button button-outline button-feedback-contact"
+                                    href="mailto:mesconseilscovid@sante.gouv.fr">Nous contacter</a>
                             </span>
                             <!--
                             <span class="feedback-controls">
@@ -226,7 +280,7 @@
             if (window.clipboardData && window.clipboardData.setData) {
                 // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
                 return clipboardData.setData("Text", text)
-        
+
             }
             else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
                 const textarea = document.createElement("textarea")
@@ -247,18 +301,19 @@
             }
         }
         const copyButton = document.querySelector('.js-copy')
-        copyButton.addEventListener('click', function(event) {
+        copyButton.addEventListener('click', function (event) {
             const button = event.target
             const article = button.parentElement.querySelector('article')
             /* Source : https://stackoverflow.com/a/42921059 */
-            const content = article.textContent.split("\n").map(function(line) {
+            const content = article.textContent.split("\n").map(function (line) {
                 return line.trim()
             }).join("\n").trim()
             copyToClipboard(content)
             button.textContent = "Texte copié ! ✓"
             event.preventDefault()
         })
-        
+
     </script>
 </body>
+
 </html>
